@@ -31,9 +31,9 @@ const FilterSection = ({search, setSearch, brand, setBrand, priceRange, setPrice
              onChange={handleBrandChange}
              >
                 {
-                    brandOnlyData?.map((item, index)=>{
-                        return <option key={index} value={item}>{item.toUpperCase()}</option>
-                    })
+                    brandOnlyData?.filter(Boolean).map((item, index) => (
+                        <option key={index} value={item}>{item.toUpperCase()}</option>
+                    ))
                 }
              </select>
 

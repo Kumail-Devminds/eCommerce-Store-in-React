@@ -25,7 +25,7 @@ const Navbar = ({location, getLocation, openDropdown, setOpenDropdown}) => {
                     <div className='md:flex gap-1 cursor-pointer text-gray-700 items-center hidden'>
                         <MapPin className='text-red-500' />
                         <span className='font-semibold '>{location ? <div className='-space-y-2'>
-                            <p>{location.county}</p>
+                            <p>{location.country}</p>
                             <p>{location.state}</p>
                         </div> : "Add Address"}</span>
                         <FaCaretDown onClick={toggleDropdown}/>
